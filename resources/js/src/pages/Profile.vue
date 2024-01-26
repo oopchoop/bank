@@ -44,14 +44,14 @@ export default defineComponent({
   },
   mounted() {
       axios
-          .get('http://localhost:4006/getUserCards')
+          .get('/getUserCards')
           .then(response =>
           {
               this.dataCard = response.data
           });
 
     axios
-        .get('http://localhost:4006/getUserCredits')
+        .get('/getUserCredits')
         .then(response =>
         {
           this.dataCredit = response.data

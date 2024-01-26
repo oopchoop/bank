@@ -32,12 +32,12 @@ export default defineComponent(
       },
       mounted() {
         axios
-            .get('http://localhost:4006/getCards')
+            .get('/getCards')
             .then(response => {
               this.cards = response.data
             });
         axios
-            .get('http://localhost:4006/getAuthStatus')
+            .get('/getAuthStatus')
             .then(response =>
             {
               this.userInfo = response.data

@@ -41,13 +41,13 @@ export default defineComponent(
       },
       mounted() {
         axios
-            .get('http://localhost:4006/getCredits')
+            .get('/getCredits')
             .then(response => {
               this.credits = response.data;
               this.allCredits = response.data;
             });
         axios
-            .get('http://localhost:4006/getAuthStatus')
+            .get('/getAuthStatus')
             .then(response =>
             {
               this.userInfo = response.data

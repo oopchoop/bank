@@ -27,7 +27,7 @@ export default {
   }),
   mounted() {
     axios
-        .get('http://localhost:4006/getCardsType')
+        .get('/getCardsType')
         .then(response =>
         {
           this.cardsType = response.data;

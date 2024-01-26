@@ -40,7 +40,7 @@ export default defineComponent({
   },
   mounted() {
     axios
-        .get('http://localhost:4006/getNews')
+        .get('/getNews')
         .then(response =>
         {
           this.news = response.data

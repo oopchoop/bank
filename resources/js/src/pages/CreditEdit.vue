@@ -28,7 +28,7 @@ export default {
   }),
   mounted() {
     axios
-        .get('http://localhost:4006/getCreditTypes')
+        .get('/getCreditTypes')
         .then(response =>
         {
             this.creditTypes = response.data;

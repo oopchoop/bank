@@ -57,12 +57,12 @@ export default defineComponent({
   },
   mounted() {
     axios
-        .get('http://localhost:4006/getCredits')
+        .get('/getCredits')
         .then(response => {
           this.credits = response.data;
         });
     axios
-        .get('http://localhost:4006/getCards')
+        .get('/getCards')
         .then(response => {
           this.cards = response.data;
         });
