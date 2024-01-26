@@ -38,7 +38,7 @@ export default defineComponent({
   },
   mounted() {
     axios
-        .get(`http://localhost:4006/getCreditFromId/${this.$route.params.id}`)
+        .get(`/getCreditFromId/${this.$route.params.id}`)
         .then(response =>
         {
           this.dataCredit = response.data
