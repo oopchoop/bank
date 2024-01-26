@@ -3,7 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\CardsType;
+use App\Models\CreditsType;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +16,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+         User::query()->insert(
+             [
+                'number' => 'admin',
+                'password' => Hash::make('admin'),
+                 'isAdmin' => true
+             ]
+         );
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+         CardsType::query()->insert(
+             [
+                 [
+                    'name' => 'Дебетовая'
+                 ],
+                 [
+                     'name' => 'Кредитная'
+                 ]
+             ]
+         );
+
+         CreditsType::query()->insert(
+             [
+                [
+                    'name' => 'Физ. лицо'
+                ],
+                [
+                    'name' => 'Юр. лицо'
+                ]
+             ]
+         );
     }
 }

@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('credits-type', function (Blueprint $table) {
             $table->id();
-            $table->string('number');
-            $table->string('password');
-            $table->boolean('isAdmin')->default(false);
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('credits-type');
     }
 };
