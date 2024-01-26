@@ -55,6 +55,8 @@ export default defineComponent({
         .then(response =>
         {
           this.dataCredit = response.data
+
+          console.log(this.dataCredit)
         });
   }
 })
