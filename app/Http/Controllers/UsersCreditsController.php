@@ -27,6 +27,8 @@ class UsersCreditsController extends Controller
             ];
 
         UsersCredits::create($result);
+
+        return redirect('/profile');
     }
 
     public function getCreditsToUser()
