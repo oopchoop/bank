@@ -38,7 +38,7 @@ class UsersCreditsController extends Controller
         $result = UsersCredits::query()
             ->select('users_credits.*', 'credits.*')
             ->leftJoin('credits', 'credits.id', '=', 'users_credits.credit_id')
-            ->where('users_credits.user_id', '=',1)
+            ->where('users_credits.user_id', '=', Auth::user()['id'])
             ->get();
 
         return $result;
