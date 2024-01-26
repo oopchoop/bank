@@ -23,7 +23,6 @@ class RegistratinRequest extends FormRequest
     {
         return [
             'number' => 'required',
-            'card' => 'required',
             'password' => 'required',
         ];
     }
