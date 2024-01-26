@@ -38,6 +38,7 @@ export default defineComponent({
     };
   },
   mounted() {
+    console.log('hello');
     axios
         .get('http://localhost:4006/getAuthStatus')
         .then(response =>
