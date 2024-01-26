@@ -40,7 +40,7 @@ export default defineComponent({
   mounted() {
     console.log('hello');
     axios
-        .get('http://localhost:4006/getAuthStatus')
+        .get('/getAuthStatus')
         .then(response =>
         {
           this.userInfo = response.data
